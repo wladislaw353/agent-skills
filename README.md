@@ -10,7 +10,7 @@ Practical skills by Vladyslav Prokop for building accessible interfaces and usef
 | [Adaptive Interfaces](skills/adaptive-interfaces/SKILL.md) | Responsive web/PWA and native app layouts, Flip/Fold postures, window resizing, safe areas, keyboard, text scaling, and task continuity. |
 | [Interaction Surfaces](skills/interaction-surfaces/SKILL.md) | Apple Live Activities and Dynamic Island, Android Live Updates, phone widgets, Apple Watch, Wear OS, rear displays, and OEM integrations. |
 
-Each skill contains a `SKILL.md` entry point, focused implementation references, and Codex interface metadata. Keep the whole skill directory together: the entry point links to the supporting files.
+Each skill contains a shared `SKILL.md` entry point and focused implementation references for Codex and Claude Code. The `agents/openai.yaml` files supply additional Codex interface metadata. Keep the whole skill directory together: the entry point links to the supporting files.
 
 ## Install in Codex
 
@@ -42,6 +42,48 @@ For a project-specific installation, use `.agents/skills/` in that project inste
 
 If an older copy is already installed, update that existing copy rather than creating duplicate skills with the same name. Preserve your own customizations before replacing files. Codex detects skill changes automatically; restart it if the skill does not appear. See the [official local skills documentation](https://learn.chatgpt.com/docs/build-skills).
 
+## Install in Claude Code
+
+### Install all three skills as a plugin
+
+Run these commands in your terminal with Claude Code installed:
+
+```sh
+claude plugin marketplace add wladislaw353/agent-skills
+claude plugin install agent-skills@vladyslav-agent-skills --scope user
+claude plugin list
+```
+
+This registers the GitHub marketplace and installs the collection for your user account. Start a new Claude Code session after installation if the client requests it. For installation inside an interactive Claude Code session, use:
+
+```text
+/plugin marketplace add wladislaw353/agent-skills
+/plugin install agent-skills@vladyslav-agent-skills
+```
+
+The second slash command opens the plugin details. Choose the install scope in that panel. With the plugin installed, invoke its skills by their namespaced names:
+
+```text
+/agent-skills:accessible-ui Review this form's semantics, keyboard behavior, errors, and focus.
+/agent-skills:adaptive-interfaces Propose useful adaptations for this project's windows and folding devices; let me choose the scenarios.
+/agent-skills:interaction-surfaces Analyze this product and propose useful widgets and system surfaces before implementation.
+```
+
+To fetch and apply plugin updates, run in your terminal:
+
+```sh
+claude plugin marketplace update vladyslav-agent-skills
+claude plugin update agent-skills@vladyslav-agent-skills
+```
+
+Restart Claude Code to apply an update when required by the client. Installation and updates follow the [official Claude Code plugin guide](https://code.claude.com/docs/en/plugins/install).
+
+### Install one skill manually
+
+Clone this repository and copy the complete `skills/<skill-name>` directory into `~/.claude/skills/`. For example, the installed entry point for Adaptive Interfaces must be `~/.claude/skills/adaptive-interfaces/SKILL.md`, with its `references/` and `agents/` directories alongside it. Keep any existing customizations when updating an older copy.
+
+For project-only discovery, use `.claude/skills/<skill-name>/` in that project instead. A manually installed skill uses its short command, such as `/adaptive-interfaces`, `/interaction-surfaces`, or `/accessible-ui`, without the plugin prefix. Use one installation method for each skill to avoid duplicate copies. Manual copies need to be refreshed when you update the cloned repository; a Git pull alone does not update a separate copy in your skills directory. See [Claude Code skill locations and invocation](https://code.claude.com/docs/en/skills).
+
 ## Codex plugin package
 
 This repository also includes a portable `plugin.json` that packages all three skills, plus a repo marketplace at `.agents/plugins/marketplace.json`. The marketplace points to the repository root. No external services, MCP servers, or credentials are required by this package.
@@ -50,7 +92,7 @@ In a supported Codex client, open the cloned repository as a project, restart th
 
 Use either the plugin or individual skill folders to avoid duplicate installations. A public GitHub repository does not automatically publish the package to the universal plugin directory.
 
-## Use
+## Use in Codex
 
 Invoke a skill explicitly in Codex:
 
@@ -69,6 +111,8 @@ $adaptive-interfaces Adapt this website and native app flow to narrow phones, la
 All three skills also allow automatic selection when the task matches their descriptions. They guide authorized work within the existing project and platform constraints. They do not install SDKs, register OEM access, or publish an app by themselves.
 
 ## Discover scenarios before implementation
+
+For Claude Code, use the corresponding slash commands listed above in place of the Codex skill prefixes below.
 
 For a broad product review, both Interaction Surfaces and Adaptive Interfaces can inspect the existing project and propose relevant scenarios before changing optional features. Ask, for example:
 

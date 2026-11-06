@@ -1,0 +1,14 @@
+{
+  "name": "vladyslav-agent-skills",
+  "owner": {
+    "name": "Vladyslav Prokop"
+  },
+  "plugins": [
+    {
+      "name": "agent-skills",
+      "source": "./",
+      "description": "Practical skills for accessible UI, adaptive layouts, widgets and cross-device interactions."
+    }
+  ],
+  "description": "Practical skills for accessible UI, adaptive layouts, widgets and cross-device interactions."
+}
