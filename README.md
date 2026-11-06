@@ -68,12 +68,26 @@ $adaptive-interfaces Adapt this website and native app flow to narrow phones, la
 
 All three skills also allow automatic selection when the task matches their descriptions. They guide authorized work within the existing project and platform constraints. They do not install SDKs, register OEM access, or publish an app by themselves.
 
+## Discover scenarios before implementation
+
+For a broad product review, both Interaction Surfaces and Adaptive Interfaces can inspect the existing project and propose relevant scenarios before changing optional features. Ask, for example:
+
+```text
+$interaction-surfaces Analyze this project and propose useful interaction scenarios. Show project evidence, platform readiness, dependencies, priority, and effort. Let me choose what to implement, defer, or exclude.
+```
+
+```text
+$adaptive-interfaces Review this project's adaptive opportunities across windows, input contexts, and folding devices. Present useful scenarios with IDs so I can select the scope before implementation.
+```
+
+The review distinguishes existing capability from new native targets, unverified hardware access, and other dependencies. Recommendations are choices rather than automatic implementation. Explicit implementation requests and previously selected scenarios continue directly; routine fixes do not require a new selection round.
+
 ## Implementation references
 
 Accessible UI includes focused guides for [components](skills/accessible-ui/references/components.md), [visual access](skills/accessible-ui/references/visual.md), and [verification](skills/accessible-ui/references/verification.md).
 
 Adaptive Interfaces includes guides for [web/PWA](skills/adaptive-interfaces/references/web.md), [Android](skills/adaptive-interfaces/references/android.md), [Apple](skills/adaptive-interfaces/references/apple.md), [cross-platform apps](skills/adaptive-interfaces/references/cross-platform.md), and [verification](skills/adaptive-interfaces/references/verification.md).
 
-Interaction Surfaces includes guides for [useful widget creation](skills/interaction-surfaces/references/widgets.md), [Apple Live Activities](skills/interaction-surfaces/references/apple-live-activities.md), [Android Live Updates](skills/interaction-surfaces/references/android-live-updates.md), [Apple Watch and Wear OS](skills/interaction-surfaces/references/watches.md), [secondary displays](skills/interaction-surfaces/references/secondary-displays.md), [surface recipes](skills/interaction-surfaces/references/surface-recipes.md), [platform routing](skills/interaction-surfaces/references/platform-routing.md), and [state and action contracts](skills/interaction-surfaces/references/interaction-contract.md).
+Interaction Surfaces includes guides for [project opportunity discovery and selection](skills/interaction-surfaces/references/project-opportunities.md), [useful widget creation](skills/interaction-surfaces/references/widgets.md), [Apple Live Activities](skills/interaction-surfaces/references/apple-live-activities.md), [Android Live Updates](skills/interaction-surfaces/references/android-live-updates.md), [Apple Watch and Wear OS](skills/interaction-surfaces/references/watches.md), [secondary displays](skills/interaction-surfaces/references/secondary-displays.md), [surface recipes](skills/interaction-surfaces/references/surface-recipes.md), [platform routing](skills/interaction-surfaces/references/platform-routing.md), and [state and action contracts](skills/interaction-surfaces/references/interaction-contract.md).
 
 The references identify concrete APIs and implementation steps. Check current official documentation and the installed SDK before implementation. Hardware support, app eligibility, OS rendering, and physical-device testing remain separate claims.

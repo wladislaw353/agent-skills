@@ -2,6 +2,8 @@
 
 Use when a repeated glance or command can save a person effort. Read the relevant platform section after defining the job. A widget is user-selected persistent access, not a small advertisement or a substitute for every notification. Checked 2026-11-06; recheck current SDK APIs, host capabilities, and library release status.
 
+In a broad project review, use [scenario discovery and selection](project-opportunities.md) first. Explain the proposed widget's real job, dependencies, and effort, then let the person choose it. An already requested widget implementation does not need another selection step.
+
 ## Proactively choose a useful widget
 
 During relevant product work, inspect recurring tasks and existing data. Identify a useful candidate even if the user only asked to improve the main flow. Implement it when native targets/capabilities already exist and the assignment authorizes it. Adding an extension, watch target, SDK, or backend that expands scope needs the same scope decision as any other feature. Do not add every possible widget or invent a user need.

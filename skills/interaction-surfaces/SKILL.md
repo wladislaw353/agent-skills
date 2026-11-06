@@ -1,6 +1,6 @@
 ---
 name: interaction-surfaces
-description: Proactively select and implement useful interaction surfaces when designing, building, or reviewing product flows involving ongoing tasks, status updates, repeated actions, notifications, or cross-device use. Covers Apple Dynamic Island/Live Activities, Android Live Updates, widgets, watches, rear/secondary displays, OEM SDKs, and in-app feedback. Apply even when the user has not named a surface; do not activate for purely cosmetic edits, static content, or unrelated backend work.
+description: Analyze product flows and discover, propose, or implement useful interaction surfaces for ongoing tasks, status updates, recurring actions, notifications, and cross-device use. Covers Apple Dynamic Island/Live Activities, Android Live Updates, widgets, watches, secondary displays, OEM SDKs, and in-app feedback. Use for project opportunity reviews before the user chooses scenarios, and proactively during relevant UI work. Exclude purely cosmetic edits, static content, and unrelated backend work.
 ---
 
 # Interaction Surfaces
@@ -8,6 +8,10 @@ description: Proactively select and implement useful interaction surfaces when d
 Help people understand progress and complete tasks with less effort, inside and outside the main app. Choose surfaces by the user's job, attention, and actual platform access—not by visual novelty or brand exposure.
 
 ## Initiative within the assigned task
+
+Choose the working mode from the user's intent. For a broad request to analyze the project, explore possibilities, or let the person decide, use **discovery → scenario selection → implementation**. Read [Project opportunity review](references/project-opportunities.md); inspect the project and present grounded candidates before adding optional features. Wait for the person's choices and implement only the selected scope. Do not mistake a recommendation for a selection.
+
+For an explicit implementation request or scenarios already selected in the conversation, continue that authorized work directly. Do not repeat discovery or ask the user to choose again. Routine bug fixes and accessibility corrections in the assigned flow need not become optional feature proposals.
 
 During relevant UI work, identify worthwhile surface opportunities without waiting for the user to request widgets, notifications, or a dynamic island by name. Inspect the existing flow, framework, design system, platform targets, and available data first. Apply this alongside the project's implementation/design guidance; it does not replace that guidance.
 
@@ -42,6 +46,7 @@ Read only the implementation reference needed for the selected surface:
 - [Android Live Updates](references/android-live-updates.md): permissions, Kotlin construction, ProgressStyle/MetricStyle, promotion diagnostics, lifecycle, and OEM admission.
 - [Watches](references/watches.md): Apple Watch and Wear OS targets, mirrored versus local activities, WidgetKit, Wear Widgets/Tiles, complications, workout APIs, and phone-watch synchronization.
 - [Useful widgets](references/widgets.md): select a recurring job; build WidgetKit or Android App Widgets/Glance with configuration, truthful data, actions, sizing, scheduling, and lifecycle checks; distinguish native widgets from web panels.
+- [Project opportunity review](references/project-opportunities.md): inspect a product, propose an evidence-based scenario catalogue, explain feasibility, and let the person select what to implement or defer.
 - [Secondary displays](references/secondary-displays.md): ordinary app mirroring, Presentation, activity launch, WindowManager, Glyph SDK/Toys, and restricted OEM panels.
 - [Other surface recipes](references/surface-recipes.md): phone widgets, Controls, shortcuts, media, Wallet, PWA, support widgets, and physical devices.
 - [Platform routing](references/platform-routing.md): use only when the platform/access family remains unclear.

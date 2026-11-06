@@ -1,11 +1,19 @@
 ---
 name: adaptive-interfaces
-description: Design, implement, and verify responsive and adaptive website or app layouts across narrow phones, landscape, tablets, resizable desktop windows, split-screen, Flip/Fold devices, and exposed secondary screens. Apply proactively to UI layout work and when resizing, folding, keyboard, zoom, cutout, or orientation problems affect a task. Exclude notification/widget integration, purely editorial changes, and unrelated backend work.
+description: Analyze, propose, implement, and verify responsive/adaptive website or app layouts across narrow phones, landscape, tablets, resizable windows, split-screen, Flip/Fold devices, and exposed secondary screens. Use for project reviews that let the user choose valuable adaptive scenarios, and proactively during UI layout work or resizing, keyboard, zoom, cutout, and orientation fixes. Exclude notification/widget integration, purely editorial changes, and unrelated backend work.
 ---
 
 # Adaptive Interfaces
 
 Make the assigned interface useful throughout changes in available space, input, posture, and text size. Preserve the product's framework, design system, task state, and accessibility. Adapt the information hierarchy and interaction rather than scaling a screenshot.
+
+## Project review and scenario selection
+
+When asked to analyze a product broadly or propose what is possible, inspect its actual flows and capabilities first. Present a grounded shortlist of adaptive experiences before implementing optional features: for example list-detail on an expanded order screen, a reachable keyboard-open checkout, an editor's supporting pane, or supported viewing/controls in a half-open posture.
+
+Use stable IDs and a compact table: **scenario/user benefit · existing project evidence · target window/posture/input · technical readiness/dependencies · priority and qualitative effort**. Sweep the relevant size, height, keyboard, text/zoom, split-screen, folding, exposed-display, and input contexts; do not manufacture a feature for every format. Explain which contexts are irrelevant or unverified. Keep a real defect in an assigned task separate from an optional product enhancement.
+
+Let the person select IDs to implement, defer, or exclude and modify the proposal. Ask through an available question tool when useful. Wait for that selection before optional implementation; a recommendation or silence is not a choice. Reuse prior choices and do not keep offering excluded scenarios. If a concrete implementation or bug fix is already requested, execute it directly rather than turning it into a new selection gate. This mode does not authorize new SDKs, native targets, external access, or publication beyond the described and authorized scope.
 
 ## Establish the actual environment
 
