@@ -1,0 +1,20 @@
+{
+  "name": "vladyslav-agent-skills",
+  "interface": {
+    "displayName": "Vladyslav Prokop \u00b7 Agent Skills"
+  },
+  "plugins": [
+    {
+      "name": "agent-skills",
+      "source": {
+        "source": "local",
+        "path": "./"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
