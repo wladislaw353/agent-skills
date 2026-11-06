@@ -1,0 +1,6 @@
+interface:
+  display_name: "Adaptive Interfaces"
+  short_description: "Adapt websites and apps to windows, folds and input"
+  default_prompt: "Use $adaptive-interfaces to adapt this interface to available window space, foldable postures, keyboard, and accessibility preferences while preserving the task."
+policy:
+  allow_implicit_invocation: true

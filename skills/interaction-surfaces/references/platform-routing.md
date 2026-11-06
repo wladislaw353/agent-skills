@@ -10,6 +10,7 @@ Use this only when the surface family is unclear. It is not a compatibility data
 | Android ongoing task / capsule | [Android Live Updates](android-live-updates.md) | Task eligibility, notification permission/channel, promotion, OEM behavior |
 | Rear panel, cover screen, external display, LED matrix | [Secondary displays](secondary-displays.md) | Ordinary app, Presentation, activity launch, Window Area, OEM SDK, or system-only template |
 | Apple Watch / Wear OS glance, workout, or independent task | [Watches](watches.md) | Mirrored versus local ownership, watch target, sensor access, transport, and offline behavior |
+| User-configured recurring glance or short command | [Useful widgets](widgets.md) | Real recurring job, widget instance/configuration, provider/host, truthful data, and supported actions |
 | Widget, command, media, Wallet, PWA, in-app message | [Surface recipes](surface-recipes.md) | Native/browser boundary, ownership, update and action contract |
 | Stale data, duplicate actions, lifecycle or cross-device inconsistency | [Interaction contract](interaction-contract.md) | Domain truth versus freshness, visibility, and command outcome |
 

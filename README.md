@@ -7,13 +7,14 @@ Practical skills by Vladyslav Prokop for building accessible interfaces and usef
 | Skill | Use it for |
 | --- | --- |
 | [Accessible UI](skills/accessible-ui/SKILL.md) | Semantic HTML, keyboard interaction, focus, forms, contrast, responsive layout, and accessibility verification. |
+| [Adaptive Interfaces](skills/adaptive-interfaces/SKILL.md) | Responsive web/PWA and native app layouts, Flip/Fold postures, window resizing, safe areas, keyboard, text scaling, and task continuity. |
 | [Interaction Surfaces](skills/interaction-surfaces/SKILL.md) | Apple Live Activities and Dynamic Island, Android Live Updates, phone widgets, Apple Watch, Wear OS, rear displays, and OEM integrations. |
 
 Each skill contains a `SKILL.md` entry point, focused implementation references, and Codex interface metadata. Keep the whole skill directory together: the entry point links to the supporting files.
 
 ## Install in Codex
 
-Ask Codex to install either skill from GitHub:
+Ask Codex to install a skill from GitHub:
 
 ```text
 $skill-installer install https://github.com/wladislaw353/agent-skills/tree/main/skills/accessible-ui
@@ -23,12 +24,17 @@ $skill-installer install https://github.com/wladislaw353/agent-skills/tree/main/
 $skill-installer install https://github.com/wladislaw353/agent-skills/tree/main/skills/interaction-surfaces
 ```
 
+```text
+$skill-installer install https://github.com/wladislaw353/agent-skills/tree/main/skills/adaptive-interfaces
+```
+
 ### Manual installation
 
 Copy the complete directory for each skill you want to use into your personal skills directory:
 
 ```text
 ~/.agents/skills/accessible-ui/
+~/.agents/skills/adaptive-interfaces/
 ~/.agents/skills/interaction-surfaces/
 ```
 
@@ -38,7 +44,7 @@ If an older copy is already installed, update that existing copy rather than cre
 
 ## Codex plugin package
 
-This repository also includes a portable `plugin.json` that packages both skills, plus a repo marketplace at `.agents/plugins/marketplace.json`. The marketplace points to the repository root. No external services, MCP servers, or credentials are required by this package.
+This repository also includes a portable `plugin.json` that packages all three skills, plus a repo marketplace at `.agents/plugins/marketplace.json`. The marketplace points to the repository root. No external services, MCP servers, or credentials are required by this package.
 
 In a supported Codex client, open the cloned repository as a project, restart the client if needed, and choose **Vladyslav Prokop · Agent Skills** in the local plugin sources. Install the `agent-skills` plugin from that source. Follow the [official plugin packaging and local installation guide](https://developers.openai.com/plugins/build/plugins) for client-specific availability.
 
@@ -56,12 +62,18 @@ $accessible-ui Build this form with keyboard access, clear errors, and reliable 
 $interaction-surfaces Implement delivery tracking for the existing iOS and Android app. Select useful system surfaces and verify their real availability.
 ```
 
-Both skills also allow automatic selection when the task matches their descriptions. They guide authorized work within the existing project and platform constraints. They do not install SDKs, register OEM access, or publish an app by themselves.
+```text
+$adaptive-interfaces Adapt this website and native app flow to narrow phones, landscape, Fold/Flip, split-screen, keyboard, and large text. Preserve selection and unsaved input.
+```
+
+All three skills also allow automatic selection when the task matches their descriptions. They guide authorized work within the existing project and platform constraints. They do not install SDKs, register OEM access, or publish an app by themselves.
 
 ## Implementation references
 
 Accessible UI includes focused guides for [components](skills/accessible-ui/references/components.md), [visual access](skills/accessible-ui/references/visual.md), and [verification](skills/accessible-ui/references/verification.md).
 
-Interaction Surfaces includes guides for [Apple Live Activities](skills/interaction-surfaces/references/apple-live-activities.md), [Android Live Updates](skills/interaction-surfaces/references/android-live-updates.md), [Apple Watch and Wear OS](skills/interaction-surfaces/references/watches.md), [secondary displays](skills/interaction-surfaces/references/secondary-displays.md), [surface recipes](skills/interaction-surfaces/references/surface-recipes.md), [platform routing](skills/interaction-surfaces/references/platform-routing.md), and [state and action contracts](skills/interaction-surfaces/references/interaction-contract.md).
+Adaptive Interfaces includes guides for [web/PWA](skills/adaptive-interfaces/references/web.md), [Android](skills/adaptive-interfaces/references/android.md), [Apple](skills/adaptive-interfaces/references/apple.md), [cross-platform apps](skills/adaptive-interfaces/references/cross-platform.md), and [verification](skills/adaptive-interfaces/references/verification.md).
+
+Interaction Surfaces includes guides for [useful widget creation](skills/interaction-surfaces/references/widgets.md), [Apple Live Activities](skills/interaction-surfaces/references/apple-live-activities.md), [Android Live Updates](skills/interaction-surfaces/references/android-live-updates.md), [Apple Watch and Wear OS](skills/interaction-surfaces/references/watches.md), [secondary displays](skills/interaction-surfaces/references/secondary-displays.md), [surface recipes](skills/interaction-surfaces/references/surface-recipes.md), [platform routing](skills/interaction-surfaces/references/platform-routing.md), and [state and action contracts](skills/interaction-surfaces/references/interaction-contract.md).
 
 The references identify concrete APIs and implementation steps. Check current official documentation and the installed SDK before implementation. Hardware support, app eligibility, OS rendering, and physical-device testing remain separate claims.

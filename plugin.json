@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "agent-skills",
-  "version": "1.0.0",
-  "description": "Practical skills for accessible UI and cross-device interaction design.",
+  "version": "1.1.0",
+  "description": "Practical skills for accessible UI, adaptive layouts, widgets and cross-device interactions.",
   "author": {
     "name": "Vladyslav Prokop"
   },

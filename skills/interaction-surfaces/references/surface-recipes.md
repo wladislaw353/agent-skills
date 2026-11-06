@@ -2,6 +2,8 @@
 
 Read only rows relevant to the assigned flow. Select a documented API available in the actual project; check current versions, permissions, templates, and policies. These are implementation routes, not instructions to add every integration. Reuse existing domain commands/data and the verification contract.
 
+For a recurring widget opportunity, read [Create useful widgets](widgets.md) and complete the actual provider/receiver or extension, data, actions, update scheduling, and smallest-size behavior. A styled card inside the app is not a completed OS-widget integration.
+
 ## Apple
 
 | Surface / job | Concrete implementation route | Crucial implementation check |

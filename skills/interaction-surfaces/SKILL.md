@@ -14,6 +14,7 @@ During relevant UI work, identify worthwhile surface opportunities without waiti
 - Implement a clearly useful interaction when it belongs to the assigned flow, uses established capabilities, and is covered by the user's authorization. Do not stop at suggesting work already requested.
 - If it requires a new native target, external service, paid dependency, OEM enrollment, or materially different scope, explain the concrete benefit and prerequisite briefly. Continue the authorized work; obtain authorization before the expansion.
 - Recommend no additional surface when the benefit is weak. Do not turn every UI task into an ecosystem roadmap or permission questionnaire.
+- For recurring glances or commands, evaluate a useful user-configured widget. When it fits the authorized product work, implement its data, configuration, actions, updates, and host integration rather than stopping at a decorative mockup. Use the dedicated widget guide below.
 - Never infer permission to send messages, enroll users, purchase services, publish, or change credentials from this skill.
 
 ## Select the smallest useful surface
@@ -40,6 +41,7 @@ Read only the implementation reference needed for the selected surface:
 - [Apple Live Activities](references/apple-live-activities.md): ActivityKit/WidgetKit setup, Dynamic Island layouts, App Intents, APNs tokens/payloads, freshness, and paired-device behavior.
 - [Android Live Updates](references/android-live-updates.md): permissions, Kotlin construction, ProgressStyle/MetricStyle, promotion diagnostics, lifecycle, and OEM admission.
 - [Watches](references/watches.md): Apple Watch and Wear OS targets, mirrored versus local activities, WidgetKit, Wear Widgets/Tiles, complications, workout APIs, and phone-watch synchronization.
+- [Useful widgets](references/widgets.md): select a recurring job; build WidgetKit or Android App Widgets/Glance with configuration, truthful data, actions, sizing, scheduling, and lifecycle checks; distinguish native widgets from web panels.
 - [Secondary displays](references/secondary-displays.md): ordinary app mirroring, Presentation, activity launch, WindowManager, Glyph SDK/Toys, and restricted OEM panels.
 - [Other surface recipes](references/surface-recipes.md): phone widgets, Controls, shortcuts, media, Wallet, PWA, support widgets, and physical devices.
 - [Platform routing](references/platform-routing.md): use only when the platform/access family remains unclear.
