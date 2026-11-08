@@ -1,7 +1,7 @@
 {
   "name": "agent-skills",
-  "version": "1.3.0",
-  "description": "Practical skills for accessible UI, adaptive layouts, widgets and cross-device interactions.",
+  "version": "1.4.0",
+  "description": "Practical skills for accessible UI, adaptive layouts, cross-device interactions, and email development.",
   "author": {
     "name": "Vladyslav Prokop"
   },

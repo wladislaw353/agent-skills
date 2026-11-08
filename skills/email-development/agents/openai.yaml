@@ -1,0 +1,6 @@
+interface:
+  display_name: "Email Development"
+  short_description: "Create useful emails with reliable delivery and autofill"
+  default_prompt: "Use $email-development to design, implement, and verify this project's email, including content, client compatibility, delivery constraints, and appropriate structured data."
+policy:
+  allow_implicit_invocation: true
