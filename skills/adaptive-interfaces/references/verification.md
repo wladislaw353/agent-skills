@@ -13,7 +13,8 @@ Start with audience evidence and supported targets. If unavailable, use represen
 | Large text / browser zoom | Reflow and readable hierarchy without disabling user preferences |
 | Expanded width | Extra pane improves the task; line lengths and forms remain sensible |
 | Compact → expanded → compact | Selection, draft, errors, scroll anchor, Back path, and session survive |
-| Half-open / separating hinge | Intended pane placement; no key content or interaction over occlusion |
+| Flip tabletop / Fold landscape tabletop | Viewing above, controls and bottom sheets below; panel expands/animates from lower bottom without crossing the hinge |
+| Half-open left/right / flat expanded | Policy follows current geometry; no forced tabletop on a vertical split or flat window |
 | Outer → inner → outer display | Permitted launch, state continuity, density/inset changes, correct task destination |
 | Split-screen / desktop resize | Continuous adaptation and input access without restarting the operation |
 | RTL / screen reader / keyboard | Logical order, focus visibility, meaningful names, and all actions reachable |
@@ -37,6 +38,12 @@ Do not add a universal `scrollWidth` assertion that rejects intentional 2D conte
 Open a specific detail item, type an unsaved draft, set a nondefault scroll position, and trigger a reversible pending action if the flow has one. Fold/unfold, resize, rotate, show/hide the keyboard, then return to compact. Confirm the same object, correct Back semantics, draft/errors, and one consistent action result. Repeat with recreation/termination only where the task and supported lifecycle warrant it.
 
 Use emulator posture controls for a configured foldable and the project's UI tests for stateful behavior. Use physical hardware to establish hinge reporting, cover-display eligibility, touch handoff, device-specific keyboard/insets, and continuity where OEM behavior matters. Do not silently force display IDs, grant special permissions, or change unrelated device settings to make a demonstration pass.
+
+## Foldable overlay regression
+
+Use the actual existing bottom sheet/picker/composer. In upper/lower tabletop, verify its visible bounds remain below the fold and within the lower region, including intermediate entrance/exit and drag frames. Test unequal regions or an off-center fold so a hard-coded midpoint cannot satisfy the check. Inspect the portal/dialog host, not just the panel's inner content. A full-window modal scrim may be intentional; the interactive panel must stay below.
+
+Open the keyboard, increase text size, scroll long content, focus the last field, submit invalid input, and dismiss with gesture and Back/Escape. Confirm that close/primary actions and focus remain reachable. Rotate a half-open book-style Fold into landscape, then unfold/refold with the sheet open: placement must follow the current region arrangement without losing draft, selection, or triggering the action again. Cover both Flip and Fold tabletop with the same policy; add left/right posture coverage separately. State which geometry was simulated and which was reported by a device.
 
 ## Useful outcomes and evidence
 

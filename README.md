@@ -133,6 +133,8 @@ $adaptive-interfaces Review this project's adaptive opportunities across windows
 
 The review distinguishes existing capability from new native targets, unverified hardware access, and other dependencies. Recommendations are choices rather than automatic implementation. Explicit implementation requests and previously selected scenarios continue directly; routine fixes do not require a new selection round.
 
+Interaction Surfaces traces proposed data and actions to working project code and requires a concrete benefit over the existing flow. It may recommend no widget or watch integration; a device category is not a reason to invent product features. Adaptive Interfaces uses the current fold geometry: Flip tabletop and landscape Fold tabletop share viewing above and controls below, with bottom sheets contained in and animated from the bottom of the lower region. See [foldable postures and overlays](skills/adaptive-interfaces/references/foldable-postures.md).
+
 ## Email development
 
 Use `$email-development` in Codex, `/agent-skills:email-development` with the Claude plugin, or `/email-development` with a manual Claude installation. It reads the existing templates/provider and creates reviewable email content, implementation, and verification. A broad review can propose useful email scenarios for the user to select. Rendering and editing do not authorize sending, DNS changes, or registering a sender.

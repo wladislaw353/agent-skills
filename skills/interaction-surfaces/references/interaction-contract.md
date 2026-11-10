@@ -49,6 +49,8 @@ Select the meaningful cases; record the environment and observed behavior. Use e
 
 For native surfaces, note device/model, OS build, region, app version, and relevant settings. Distinguish documentation review, simulator/emulator checks, and physical-device evidence. If hardware is unavailable, test the domain logic and available UI, then report the remaining device validation instead of claiming compatibility.
 
+Verify each exposed action against its real handler and resulting domain state, including a rejected operation. A changed UI label, delivered transport message, or demo response does not prove the app supports the command. Confirm that every displayed metric comes from the identified source and that the implemented surface actually reduces the intended effort. Remove unsupported controls rather than inventing behavior to satisfy the layout.
+
 For in-app panels and overlays, verify real interaction: focus and keyboard access, dismissal, touch, independent scrolling where needed, and access to underlying primary actions. Do not infer this from a screenshot.
 
 ## Measuring outcomes

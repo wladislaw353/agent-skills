@@ -11,9 +11,11 @@ Make the assigned interface useful throughout changes in available space, input,
 
 When asked to analyze a product broadly or propose what is possible, inspect its actual flows and capabilities first. Present a grounded shortlist of adaptive experiences before implementing optional features: for example list-detail on an expanded order screen, a reachable keyboard-open checkout, an editor's supporting pane, or supported viewing/controls in a half-open posture.
 
+Trace proposed content and controls to existing data and working handlers. Adapt actual tasks; do not invent features to occupy a second pane or justify a device mode. State the reachability, continuity, or effort benefit. No additional posture-specific UI is a valid outcome when the ordinary layout already serves the task.
+
 Use stable IDs and a compact table: **scenario/user benefit · existing project evidence · target window/posture/input · technical readiness/dependencies · priority and qualitative effort**. Sweep the relevant size, height, keyboard, text/zoom, split-screen, folding, exposed-display, and input contexts; do not manufacture a feature for every format. Explain which contexts are irrelevant or unverified. Keep a real defect in an assigned task separate from an optional product enhancement.
 
-Let the person select IDs to implement, defer, or exclude and modify the proposal. Ask through an available question tool when useful. Wait for that selection before optional implementation; a recommendation or silence is not a choice. Reuse prior choices and do not keep offering excluded scenarios. If a concrete implementation or bug fix is already requested, execute it directly rather than turning it into a new selection gate. This mode does not authorize new SDKs, native targets, external access, or publication beyond the described and authorized scope.
+When useful candidates exist, let the person select IDs to implement, defer, or exclude and modify the proposal. If none pass, report that briefly without an empty selection step. Ask through an available question tool when useful. Wait for that selection before optional implementation; a recommendation or silence is not a choice. Reuse prior choices and do not keep offering excluded scenarios. If a concrete implementation or bug fix is already requested, execute it directly rather than turning it into a new selection gate. This mode does not authorize new SDKs, native targets, external access, or publication beyond the described and authorized scope.
 
 ## Establish the actual environment
 
@@ -38,12 +40,14 @@ For the assigned flow, decide which information and actions must remain availabl
 | Narrow window / enlarged text | One primary pane, readable flow, wrapping actions, reachable navigation |
 | Wide window with enough usable height | List-detail or supporting pane; bounded reading/form widths |
 | Wide but very short landscape / keyboard open | Reduce persistent chrome; scroll content and keep focused input/actions reachable |
-| Separating vertical fold | Place related panes in usable regions; preserve selection when collapsing |
-| Supported half-open horizontal fold | Deliberately separate viewing and controls when the task benefits |
+| Separating vertical fold in current window coordinates | Related left/right panes only when useful; preserve selection when collapsing |
+| Supported tabletop posture with upper/lower regions | Viewing above; existing controls and bottom sheets in the lower region, entering from its bottom |
 | Tiny exposed cover screen | Task-specific compact content when the OS permits it |
 | Resizable desktop/split-screen | Recompute from window bounds continuously; support keyboard/pointer as well as touch |
 
 Use content failure points to choose web breakpoints and the platform's actual adaptive primitives for native layouts. Do not force multiple panes solely because a device is called Fold. A posture can change without a useful width-class change, and a narrow desktop window can need the same layout as a phone.
+
+For folding work, read [Foldable postures and lower-region controls](references/foldable-postures.md). Flip tabletop and a book-style Fold rotated into landscape tabletop share the same upper/lower policy. Classify the current geometry and posture, not the device's hinge direction in its default orientation. Do not leave a bottom sheet opening from the hinge into the upper viewing area.
 
 Read the relevant implementation guide, not the whole library:
 

@@ -6,9 +6,11 @@ In a broad project review, use [scenario discovery and selection](project-opport
 
 ## Proactively choose a useful widget
 
-During relevant product work, inspect recurring tasks and existing data. Identify a useful candidate even if the user only asked to improve the main flow. Implement it when native targets/capabilities already exist and the assignment authorizes it. Adding an extension, watch target, SDK, or backend that expands scope needs the same scope decision as any other feature. Do not add every possible widget or invent a user need.
+During relevant product work, inspect recurring tasks and trace existing data/actions using the entry point's evidence and benefit checks. Consider a candidate only when persistent access makes an actual job easier; no widget is a valid outcome. Implement it when native targets/capabilities already exist and the assignment authorizes it. Adding an extension, watch target, SDK, or backend that expands scope needs the same scope decision as any other feature. Do not add every possible widget or invent a user need.
 
 For each candidate, define the repeatable question, minimum truthful answer, safe next action, configuration, freshness, and why opening the app is avoidable. Prefer a concise decision in the task discussion to a mandatory design document.
+
+The following are conditional examples, not proof that an app in that category supports the listed action. For example, a task list without completion cannot acquire a completion command merely to fill a widget.
 
 | Product job | Candidate | Useful content/action | Fit check |
 | --- | --- | --- | --- |

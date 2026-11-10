@@ -1,6 +1,6 @@
 interface:
   display_name: "Interaction Surfaces"
   short_description: "Design useful interactions inside and beyond apps"
-  default_prompt: "Use $interaction-surfaces to identify and implement the most useful interaction surfaces for this product within the existing scope."
+  default_prompt: "Use $interaction-surfaces to trace this product's real data and actions, assess practical benefit, and implement useful surfaces within the assigned scope. Recommend none when no surface adds value; do not invent product capabilities."
 policy:
   allow_implicit_invocation: true

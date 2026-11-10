@@ -7,13 +7,21 @@ description: Analyze product flows and discover, propose, or implement useful in
 
 Help people understand progress and complete tasks with less effort, inside and outside the main app. Choose surfaces by the user's job, attention, and actual platform access—not by visual novelty or brand exposure.
 
+## Require product evidence and practical benefit
+
+Start from implemented user jobs, then choose a surface. Before recommending or implementing a candidate, trace its displayed data to the actual model/query and each action through the existing UI or domain entry point, handler, and resulting state change (including persistence/API where applicable). Check account, authorization, and state restrictions. Record the relevant file/symbol and any missing link; names in a README, types, mock data, or thematic relevance do not prove a working capability.
+
+State the concrete effort saved compared with the existing flow: a useful glance, fewer steps, or an important timely action. Weigh that against reading/input friction, privacy, freshness, and maintenance. A widget or watch app is not a goal by itself. No additional surface is a valid, complete recommendation when none has a defensible benefit; do not fill a device checklist with weak ideas.
+
+An existing feature's new presentation and a new product capability are different scopes. Do not invent domain actions, endpoints, background jobs, metrics, or state transitions to populate a watch, widget, or sample design. An unsupported command must be omitted; a read-only exact-task link is useful only if it independently passes the benefit check. If the requested outcome requires missing domain behavior, name that gap and resolve its scope before building it. Selecting a surface does not implicitly authorize inventing the underlying feature.
+
 ## Initiative within the assigned task
 
 Choose the working mode from the user's intent. For a broad request to analyze the project, explore possibilities, or let the person decide, use **discovery → scenario selection → implementation**. Read [Project opportunity review](references/project-opportunities.md); inspect the project and present grounded candidates before adding optional features. Wait for the person's choices and implement only the selected scope. Do not mistake a recommendation for a selection.
 
 For an explicit implementation request or scenarios already selected in the conversation, continue that authorized work directly. Do not repeat discovery or ask the user to choose again. Routine bug fixes and accessibility corrections in the assigned flow need not become optional feature proposals.
 
-During relevant UI work, identify worthwhile surface opportunities without waiting for the user to request widgets, notifications, or a dynamic island by name. Inspect the existing flow, framework, design system, platform targets, and available data first. Apply this alongside the project's implementation/design guidance; it does not replace that guidance.
+During relevant UI work, consider surface opportunities only for evidenced jobs in the assigned flow. Inspect the existing flow, framework, design system, platform targets, and available data first, and apply the evidence and benefit checks above. Apply this alongside the project's implementation/design guidance; it does not replace that guidance.
 
 - Implement a clearly useful interaction when it belongs to the assigned flow, uses established capabilities, and is covered by the user's authorization. Do not stop at suggesting work already requested.
 - If it requires a new native target, external service, paid dependency, OEM enrollment, or materially different scope, explain the concrete benefit and prerequisite briefly. Continue the authorized work; obtain authorization before the expansion.
@@ -23,7 +31,7 @@ During relevant UI work, identify worthwhile surface opportunities without waiti
 
 ## Select the smallest useful surface
 
-For each plausible candidate, identify the **trigger, user's question, minimum answer, permitted action, and end/dismissal condition**. Prefer a short explanation in the task discussion over a separate planning document.
+For each candidate that passes the evidence and benefit checks, identify the **trigger, user's question, minimum answer, supported action (if any), and end/dismissal condition**. The rows below are conditional routes for existing jobs, not a feature backlog. Prefer a short explanation in the task discussion over a separate planning document.
 
 | User need | Start with | Watch for |
 | --- | --- | --- |

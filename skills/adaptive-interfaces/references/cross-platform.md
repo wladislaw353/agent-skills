@@ -20,6 +20,8 @@ Do not replace all layout thresholds with an Android/iOS device check. Where fol
 
 For Compose Multiplatform, .NET MAUI, Electron, Capacitor, or another stack, identify which layer owns the window, safe area, keyboard, and native feature integration. Use the installed framework's current layout/lifecycle APIs. Keep target-specific adapters at an explicit boundary rather than spreading guessed platform flags across components. A library name is not evidence of folding-device support.
 
+For every framework, apply [the shared foldable policy](foldable-postures.md) to the actual overlay host as well as the screen layout. A React portal, native modal, or root navigator overlay can ignore a pane's constraints. In tabletop, bottom sheets must use lower-region bounds and a bottom-origin animation on both Flip and landscape Fold; verify keyboard, focus, and gestures after coordinate conversion.
+
 ## Embedded web content
 
 Measure the real web-view container. Ensure the HTML viewport and native insets have compatible ownership; neither layer should blindly pad the same area twice. Test keyboard, focus, zoom, scrolling, navigation, bridge lifecycle, and rotation in the actual shell. An ordinary browser test and a web-view test are separate evidence.

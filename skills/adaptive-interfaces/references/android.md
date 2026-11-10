@@ -19,14 +19,16 @@ Collect `WindowInfoTracker.getOrCreate(context).windowLayoutInfo(activity)` with
 | Property | Decision |
 | --- | --- |
 | `bounds` | Actual fold/hinge geometry in the reported window coordinate system |
-| `orientation` | Horizontal versus vertical arrangement |
+| `orientation` | Horizontal versus vertical fold in the current window, not the device's default orientation |
 | `state` | Flat versus `HALF_OPENED`, subject to available device reporting |
 | `isSeparating` | Whether content should treat the regions as separated |
 | `occlusionType` | Whether the feature hides content, including `FULL` occlusion |
 
 Convert coordinate spaces and units deliberately: reported pixel bounds are not Compose dp. Account for where the content window begins. A zero-width crease can affect posture without concealing pixels; not every fold needs a blank gutter. Do not equate half-open with a particular marketing name or assume a fixed 90-degree angle.
 
-For a supported horizontal half-open posture, a camera/video call might place viewing above and controls below. A vertical separating feature can suit list-detail. If the task benefits from one pane, keep it coherent in a usable region. Make dialogs and touch targets avoid occlusion too. See [fold-aware app guidance](https://developer.android.com/develop/ui/compose/layouts/adaptive/foldables/make-your-app-fold-aware).
+Apply [the shared posture and overlay policy](foldable-postures.md). Flip tabletop and Fold rotated into landscape tabletop use the same viewing-above/controls-below arrangement. A vertical separating feature in the current window can suit left/right list-detail; do not pin that policy to the Fold name. If the task benefits from one pane, keep it coherent in a usable region. See [fold-aware app guidance](https://developer.android.com/develop/ui/compose/layouts/adaptive/foldables/make-your-app-fold-aware).
+
+Inspect the actual bottom-sheet/dialog host. A separate modal window may ignore constraints applied to the underlying pane. In tabletop, place bottom-origin panels in the lower region, limit their expanded height to its usable bounds, and animate from its bottom. Keep keyboard avoidance, drag/dismiss, focus, and accessibility working there; do not anchor a sheet at the hinge and expand it into the upper viewing region. Use the installed toolkit's supported positioning APIs and verify the whole host, not just inner content padding.
 
 ## Insets, keyboard, and input
 

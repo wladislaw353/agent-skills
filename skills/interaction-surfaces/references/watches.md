@@ -2,6 +2,12 @@
 
 Use for a wrist glance, quick action, workout, or task that must continue without the phone. Documentation checked 2026-11-05; verify the installed SDK, library release status, watch OS, renderer, and companion requirements before coding. Read only the platform sections relevant to the task.
 
+## Establish a real wrist use case
+
+Before choosing APIs, apply the entry point's product-evidence and benefit checks. Trace every displayed value and command into the working app. Do not derive actions from the app's topic: a travel app need not support check-in, a habit log need not have a timer, and a health dashboard need not record workouts. The recipes below apply only to capabilities that exist or that the user explicitly assigned as new product work.
+
+Explain why the wrist helps in a concrete situation and why a glance, mirrored notification, or existing phone flow is insufficient or sufficient. Start with the smallest useful option; a passive glance needs no invented action. Reuse real commands with their existing restrictions. Do not add dummy handlers, optimistic success, or new backend behavior to make a watch screen appear complete. If nothing benefits from wrist access, recommend no watch integration and continue the assigned work.
+
 ## Choose the owner and surface
 
 | Need | Apple Watch | Wear OS | Implementation decision |
