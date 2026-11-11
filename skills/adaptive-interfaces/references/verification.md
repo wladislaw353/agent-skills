@@ -41,9 +41,23 @@ Use emulator posture controls for a configured foldable and the project's UI tes
 
 ## Foldable overlay regression
 
-Use the actual existing bottom sheet/picker/composer. In upper/lower tabletop, verify its visible bounds remain below the fold and within the lower region, including intermediate entrance/exit and drag frames. Test unequal regions or an off-center fold so a hard-coded midpoint cannot satisfy the check. Inspect the portal/dialog host, not just the panel's inner content. A full-window modal scrim may be intentional; the interactive panel must stay below.
+Use the actual existing bottom-origin sheet or picker; test persistent composers separately under the text-entry checks below. In upper/lower tabletop, verify its visible bounds remain below the fold and within the lower region, including intermediate entrance/exit and drag frames. Test unequal regions or an off-center fold so a hard-coded midpoint cannot satisfy the check. Inspect the portal/dialog host, not just the panel's inner content. A full-window modal scrim may be intentional; the interactive panel must stay below.
 
 Open the keyboard, increase text size, scroll long content, focus the last field, submit invalid input, and dismiss with gesture and Back/Escape. Confirm that close/primary actions and focus remain reachable. Rotate a half-open book-style Fold into landscape, then unfold/refold with the sheet open: placement must follow the current region arrangement without losing draft, selection, or triggering the action again. Cover both Flip and Fold tabletop with the same policy; add left/right posture coverage separately. State which geometry was simulated and which was reported by a device.
+
+## Tabletop content, text entry, and closed-cover checks
+
+Verify the physical scenario explicitly: device resting like a laptop, upper region facing the person, lower region used for interaction. Cover Flip tabletop and a book-style Fold rotated into that arrangement. Verify full-open restoration separately; a tall unfolded Flip must not acquire cramped tablet columns. A simulated or proposed device name establishes no hardware support.
+
+For the assigned screen, compare the keep-above / move-below / collapse / hide decisions with the rendered interface. Upper content must remain useful at the reduced height. Required actions remain discoverable, secondary chrome does not consume the viewing area, hidden controls cannot receive focus, and unfolding restores a coherent full layout.
+
+For an existing chat/input flow, exercise:
+
+- Keyboard closed → focus → type → multiline growth → error → send or cancel → dismiss keyboard. Conversation stays above, composer stays near the top of the lower region, and actual IME placement leaves input/actions visible. Verify reading position and draft, not just panel bounds.
+- Different keyboard heights and suggestion rows, supported floating/split modes, hardware keyboard, large text, and short lower regions. Check intersection of keyboard occlusion with each region; resizing plus padding must not subtract space twice. If typing cannot fit, verify the explicit continuation and preserved draft instead of marking tabletop supported.
+- Fold/unfold/rotate while typing and during a pending send. Preserve object, caret/focus as supported, draft, and one command outcome. Reclaim keyboard space after dismissal; do not retain a fake spacer or move the fold to the resized viewport midpoint.
+
+Test the small closed Flip cover separately from a phone-sized outer screen. Verify one useful glance/short action, readable targets around cutouts, no full navigation or dense dashboard squeezed into it, lock/privacy and stale states, and continuation to the same task on opening. Exercise brief input only when the actual cover host supports it. Report real keyboard/cover hardware evidence separately from simulated layout checks.
 
 ## Useful outcomes and evidence
 

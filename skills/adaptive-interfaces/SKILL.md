@@ -41,13 +41,14 @@ For the assigned flow, decide which information and actions must remain availabl
 | Wide window with enough usable height | List-detail or supporting pane; bounded reading/form widths |
 | Wide but very short landscape / keyboard open | Reduce persistent chrome; scroll content and keep focused input/actions reachable |
 | Separating vertical fold in current window coordinates | Related left/right panes only when useful; preserve selection when collapsing |
-| Supported tabletop posture with upper/lower regions | Viewing above; existing controls and bottom sheets in the lower region, entering from its bottom |
-| Tiny exposed cover screen | Task-specific compact content when the OS permits it |
+| Supported tabletop posture with upper/lower regions | Viewing above, controls/input below; only bottom-origin sheets enter from the lower bottom |
+| Phone-sized outer display | Ordinary compact phone flow when permitted |
+| Small Flip cover display | Dedicated glance/brief-action microinterface; no shrunken full app |
 | Resizable desktop/split-screen | Recompute from window bounds continuously; support keyboard/pointer as well as touch |
 
 Use content failure points to choose web breakpoints and the platform's actual adaptive primitives for native layouts. Do not force multiple panes solely because a device is called Fold. A posture can change without a useful width-class change, and a narrow desktop window can need the same layout as a phone.
 
-For folding work, read [Foldable postures and lower-region controls](references/foldable-postures.md). Flip tabletop and a book-style Fold rotated into landscape tabletop share the same upper/lower policy. Classify the current geometry and posture, not the device's hinge direction in its default orientation. Do not leave a bottom sheet opening from the hinge into the upper viewing area.
+For folding work, read [Foldable postures and lower-region controls](references/foldable-postures.md). Flip tabletop and a book-style Fold rotated into landscape tabletop share the same upper/lower policy. Classify the current geometry and posture, not the device's hinge direction in its default orientation. Explain the physical laptop-like setup and decide what stays above, moves below, collapses, or hides. In chat, keep conversation above and the composer near the top of the lower region, with verified keyboard space below. Persistent input differs from bottom sheets, which enter from the lower bottom. Fully open layouts use the whole screen according to its actual dimensions.
 
 Read the relevant implementation guide, not the whole library:
 

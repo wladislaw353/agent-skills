@@ -1,6 +1,6 @@
 interface:
   display_name: "Adaptive Interfaces"
   short_description: "Adapt websites and apps to windows, folds and input"
-  default_prompt: "Use $adaptive-interfaces to adapt existing tasks to current window geometry, posture, keyboard, and accessibility preferences. In Flip or landscape Fold tabletop, keep bottom sheets and their animations in the lower region while preserving task state."
+  default_prompt: "Use $adaptive-interfaces to adapt existing tasks to fully open, laptop-like tabletop, and closed-cover use: prioritize upper content, lower controls and keyboard-aware input, and useful cover microinteractions while preserving task state."
 policy:
   allow_implicit_invocation: true

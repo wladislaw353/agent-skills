@@ -15,6 +15,16 @@ Use when a device has a second screen, rear panel, cover display, or LED matrix.
 
 Record exact device, firmware, region, app/channel eligibility, SDK version, access result, and physical-device evidence. Do not hard-code display ID 1, equate a `Display` name with authorization, or use hidden APIs/root/overlays to claim supported integration.
 
+## Design for the actual cover-screen task
+
+A phone-sized outer display can host the ordinary compact phone flow. A small closed Flip cover display needs a dedicated glance/brief-action interface, even when the OS permits launching a full app. Its attention and input budget is closer to a watch; its APIs, dimensions, cutouts, and input support must still be checked independently.
+
+Start from a useful existing product job. Show one primary answer, necessary context/freshness, and only supported short actions. Remove full-app navigation, sidebars, dense dashboards, and long forms from this presentation. Do not use scaling, tiny text, or hidden overflow to squeeze in the entire app. Assess real usable area and touch targets around cameras and system controls. No useful microtask is a valid reason to add no cover integration.
+
+Treat brief input as conditional on verified host and keyboard support; otherwise expose an honest continuation to the same task when opened. Preserve account, selected object, draft, and pending outcome through cover → inner → cover, without replaying commands. Check lock/privacy state, unavailable/stale data, dismissal, and interrupted actions. A watch-like interaction budget does not grant watch APIs or imply autonomous execution.
+
+Keep this closed-cover experience distinct from the inner screen's half-open tabletop layout: tabletop divides viewing above and controls/input below, while the fully opened inner screen uses its whole available area. Derive each presentation from the same domain state. Device feature lists are not a backlog; every proposed action still needs working project evidence and a concrete benefit.
+
 ## Android Presentation path
 
 1. Enumerate current candidates with `DisplayManager.getDisplays(DisplayManager.DISPLAY_CATEGORY_PRESENTATION)`; select the intended display explicitly from verified device behavior/user selection. Do not silently pick an unrelated external monitor.

@@ -36,6 +36,8 @@ Use the current edge-to-edge setup and [window insets](https://developer.android
 
 Keep the focused field, its error, and the essential action reachable with the IME visible. Do not assume the keyboard always resizes the window the same way. Test gesture and button navigation, display/font scaling, landscape, floating keyboards when relevant, TalkBack, physical keyboard focus, and pointer input. A density change must not preserve obsolete cached pixel geometry.
 
+For tabletop text entry, use [the composer and keyboard policy](foldable-postures.md): input near the upper edge of the lower region, system IME space below where supported. Convert IME occlusion and fold bounds into the same coordinates; account only for their actual intersection and avoid applying IME padding again after window resize/inset consumption. Keep upper content useful and collapse secondary controls during typing. Test the real keyboard; an app cannot assume it controls every IME's position.
+
 ## Continuity: Fold, Flip, rotation, and multi-window
 
 Hoist the selected object, draft, validation state, and task/session outside layout branches. Use `ViewModel`, `SavedStateHandle`, `rememberSaveable` for appropriate restorable UI state, and durable storage for data that must survive process death. `ViewModel` alone does not survive process death. Use stable item keys and preserve a meaningful scroll anchor. A fold/unfold can trigger activity recreation or a display transition, depending on the device.

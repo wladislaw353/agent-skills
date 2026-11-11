@@ -80,6 +80,8 @@ Use runtime capability and authorization checks where available. Do not detect s
 
 ## Design the interaction, not just the successful frame
 
+For a small closed Flip cover display, use a dedicated glance or brief-action microinterface; even permitted full-app launch does not justify shrinking the full UI. Distinguish it from a phone-sized outer display and from inner-screen tabletop. Read [Secondary displays](references/secondary-displays.md) for selection, access, and task continuity.
+
 Show one primary answer in a compact surface; reveal context and essential actions in expanded states. Adapt content to each surface rather than shrinking the full app. Inspect actual layouts, large text, localization, assistive technology, and light/dark/low-power presentations where relevant.
 
 Distinguish task state, data freshness, presentation visibility, and command outcome. A dismissed card is not a canceled order; an accepted push is not a viewed update; a tapped command is not a completed operation. Use real progress, explicit uncertainty, and confirmed action results.
