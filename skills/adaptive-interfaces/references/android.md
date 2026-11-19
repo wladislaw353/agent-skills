@@ -32,7 +32,7 @@ Inspect the actual bottom-sheet/dialog host. A separate modal window may ignore 
 
 ## Insets, keyboard, and input
 
-Use the current edge-to-edge setup and [window insets](https://developer.android.com/develop/ui/compose/system/insets). Choose ownership for `WindowInsets.safeDrawing`, system bars, display cutout, and IME. With Compose, inspect `windowInsetsPadding`, `imePadding`, and inset consumption before layering modifiers. Nested safe-area and Scaffold content padding can double-apply edges. In Views, use `WindowInsetsCompat` and the compatible animation/lifecycle path.
+Use the current edge-to-edge setup and [window insets](https://developer.android.com/develop/ui/compose/system/insets). Choose ownership for `WindowInsets.safeDrawing`, system bars, display cutout, and IME. A cutout inset covers a whole edge; `DisplayCutout.getBoundingRects()` gives the actual shape, so only content that meets it needs to move. With Compose, inspect `windowInsetsPadding`, `imePadding`, and inset consumption before layering modifiers. Nested safe-area and Scaffold content padding can double-apply edges. In Views, use `WindowInsetsCompat` and the compatible animation/lifecycle path.
 
 Keep the focused field, its error, and the essential action reachable with the IME visible. Do not assume the keyboard always resizes the window the same way. Test gesture and button navigation, display/font scaling, landscape, floating keyboards when relevant, TalkBack, physical keyboard focus, and pointer input. A density change must not preserve obsolete cached pixel geometry.
 

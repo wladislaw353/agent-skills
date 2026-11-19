@@ -16,6 +16,11 @@ Start with audience evidence and supported targets. If unavailable, use represen
 | Flip tabletop / Fold landscape tabletop | Viewing above, controls and bottom sheets below; panel expands/animates from lower bottom without crossing the hinge |
 | Half-open left/right / flat expanded | Policy follows current geometry; no forced tabletop on a vertical split or flat window |
 | Outer → inner → outer display | Permitted launch, state continuity, density/inset changes, correct task destination |
+| Cutout or side status column | Controls clear of the occluded shape; content keeps its width beside a corner cutout, no full-height empty strip; landscape notch band still respected |
+| Side camera column on a closed outer display | When the host docks apps in that column, the tabs stand there under the camera; pages end before it and nothing scrolls under it; status items readable on the column, also beside a dark photo header; screens without tabs drop the column instead of leaving an empty strip; floating actions near the bottom not covered |
+| Camera and status in a top corner | Bar starts at the top of the free edge and steps around the corner; nothing below moves down by the corner's height; compare the top gap with the plain inset in every orientation and on every display; open the side/bottom sheets, account and notification menus, context menus, and toasts there too |
+| Home indicator at the bottom | Composers, bottom bars, floating save buttons and side columns stay down at the edge with their usual gap; no empty band the height of the inset under them; their ends clear the rounded corners |
+| Rounded display corners | Logo and end controls of a bar near an edge with no inset stay clear of the curve (landscape top edge, cover display); check a masked screenshot, not element boxes |
 | Split-screen / desktop resize | Continuous adaptation and input access without restarting the operation |
 | RTL / screen reader / keyboard | Logical order, focus visibility, meaningful names, and all actions reachable |
 | Process recreation / restoration | Durable task data restores; consequential operations do not run twice |
